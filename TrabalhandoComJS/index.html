@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<body>
+<div class="inputs">
+    <label>Nome</label>
+    <input type="text" name="nome" id="nome">
+    <label>Sobrenome</label>
+    <input type="text" name="sobrenome" id="sobrenome">
+    <label>Email</label>
+    <input type="text" name="email" id="email">
+</div>
+
+<div>
+    <button onclick="imprimir()">Imprima os nomes</button>
+</div>
+<div hidden id="logs" class="logs">
+    <label>Nome</label>
+    <input readonly type="text"  name="nomeLog" id="nomeLog">
+    <label>Sobrenome</label>
+    <input readonly type="text"  name="sobrenomeLog" id="sobrenomeLog">
+    <label>Email</label>
+    <input readonly type="text"  name="emailLog" id="emailLog">
+</div>
+</body>
+
+<script>
+function imprimir(){
+    var nome = document.getElementById('nome').value;
+    var sobrenome = document.getElementById('sobrenome').value;
+    var email = document.getElementById('email').value;
+
+    document.getElementById('nomeLog').value = nome;
+    document.getElementById('sobrenomeLog').value = sobrenome;
+    document.getElementById('emailLog').value = email;
+
+    document.getElementById('logs').hidden = false;
+}
+
+</script>
